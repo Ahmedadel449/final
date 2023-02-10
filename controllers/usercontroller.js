@@ -103,6 +103,17 @@ const user_login = async (req, res) => {
     }
 }
 //updatepassword
+const dola = async (req, res) => {
+    try {
+
+        res.status(200).send({ success: true, msg: "Ahmed adel" });
+        
+    } catch (error) {
+        res.status(400).send({ success: false, msg: error.message });
+        
+    }
+    
+}
 const update_password = async (req, res) => {
     try {
         const user_id = req.body.user_id;
@@ -203,4 +214,4 @@ const reset_password = async (req, res) => {
     }
 }
 
-module.exports = { register_user, user_login, update_password, forget_password, reset_password }
+module.exports = { register_user, user_login, update_password, forget_password, reset_password ,dola}
