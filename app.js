@@ -5,7 +5,7 @@ const path = require('path');
 const app =express(); 
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://https://final-cup0.onrender.com/news",
+mongoose.connect("mongodb://127.0.0.1:27017/news",
 {useNewUrlParser:true , useUnifiedTopology: true}, (err) => {
     if (err){
      console.log(err)
