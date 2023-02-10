@@ -30,7 +30,7 @@ const upload = multer({storage:storage});
 const user_controller = require("../controllers/usercontroller");
 const auth =require("../middleware/auth");
 
-user_route.post('/register',user_controller.register_user)
+user_route.post('/register', upload.single('image'),user_controller.register_user)
 user_route.post('/login',user_controller.user_login)
 user_route.post('/dola',user_controller.dola)
 user_route.get('/test',auth,function(req,res){
