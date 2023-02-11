@@ -5,7 +5,7 @@ const path = require('path');
 const app =express(); 
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://127.0.0.1:27017/news",
+mongoose.connect("mongodb+srv://Ahmed:01214548429@test.0zokfyo.mongodb.net/?retryWrites=true&w=majority",
 {useNewUrlParser:true , useUnifiedTopology: true}, (err) => {
     if (err){
      console.log(err)
@@ -19,5 +19,5 @@ mongoose.connect("mongodb://127.0.0.1:27017/news",
 const user_routes = require("./routers/userrouter");
 app.use('/news',user_routes)
 
-app.listen(process.env.PORT || 3000,() => console.log('server listen on poort 3000'));
+app.listen(process.env.PORT || 3000,() => console.log('server listen on port 3000'));
 
