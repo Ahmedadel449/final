@@ -5,7 +5,7 @@ const path = require('path');
 const app =express(); 
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://Ahmed:01214548429@test.0zokfyo.mongodb.net/test?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://ahmed:LG8njwIIgTOHbRqa@news.hl1cepz.mongodb.net/library?retryWrites=true&w=majority",
 {useNewUrlParser:true , useUnifiedTopology: true}, (err) => {
     if (err){
      console.log(err)
