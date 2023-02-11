@@ -26,7 +26,6 @@ const securePassword = async (password) => {
 }
 
 const register_user = async (req, res) => {
-
     try {
         const spassword = await securePassword(req.body.password);
 
@@ -37,8 +36,7 @@ const register_user = async (req, res) => {
             address: req.body.address,
             email: req.body.email,
             password: spassword,
-            consfirmpassword: req.body.consfirmpassword,
-//             image: req.file.filename,
+            consfirmpassword: req.body.consfirmpassword
         });
 
 
