@@ -36,9 +36,8 @@ const UserSchema = new mongoose.Schema({
     //     type: Date
     // },
     image:{
-        type: String,
-        require: true,
-
+        data : Buffer ,
+        contentType :String ,
     },
     token:{
         type:String,
