@@ -36,7 +36,8 @@ const register_user = async (req, res) => {
             address: req.body.address,
             email: req.body.email,
             password: spassword,
-            consfirmpassword: req.body.consfirmpassword
+            consfirmpassword: req.body.consfirmpassword,
+            image: req.file.filename,
         });
 
 
