@@ -35,11 +35,11 @@ const UserSchema = new mongoose.Schema({
     // dateOfBirth: {
     //     type: Date
     // },
-//     image:{
-//         type: String,
-//         require: true,
+    image:{
+        type: String,
+        require: true,
 
-//     },
+    },
     token:{
         type:String,
         default:''
