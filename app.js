@@ -14,6 +14,7 @@ mongoose.connect("mongodb+srv://Ahmed:01214548429@test.0zokfyo.mongodb.net/libra
         console.log('connecting to DB')
     }
 });
+app.use(express.static(path.join( __dirname  ,'images' )));
 
 //user routes
 const user_routes = require("./routers/userrouter");
