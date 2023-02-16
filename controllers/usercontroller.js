@@ -38,10 +38,11 @@ const register_user = async (req, res) => {
             password: spassword,
             consfirmpassword: req.body.consfirmpassword,
             image:{
-                date:req.file.filename ,
+                date:req.file ,
                 contentType: 'image' 
             } ,
         });
+        console.log(req.file)
 
 
         const userData = await User.findOne({ email: req.body.email });
